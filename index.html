@@ -6,98 +6,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section class="w-full h-screen flex flex-col j">
-      <header class="text-gray-600 bg-blue-200 body-font">
-        <div
-          class="container mx-auto flex justify-between flex-wrap p-5 flex-col md:flex-row items-center"
-        >
-          <a
-            class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-10 h-10 text-white p-2 bg-blue-400 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-              ></path>
-            </svg>
-            <span class="ml-3 text-xl">Calculator</span>
-          </a>
+    <section
+      class="w-full h-screen flex justify-center items-center bg-[url('./8.jpg')]"
+    >
+      <form
+        onsubmit="(e)=>{
+    e.preventDefault();
 
-          <button
-            class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+
+  }"
+        class="w-[30%] h-[60%]"
+      >
+        <span
+          class="mb-6 font-bold text-[30px] text-green-500 flex justify-center items-center"
+          >Calculator Login
+        </span>
+        <div class="mb-6">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your email</label
           >
-            Next
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-4 h-4 ml-1"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="name@.com"
+            required
+          />
         </div>
-      </header>
-      <div class="w-full h-[70%] flex justify-center items-center">
-        <div
-          class="w-[30%] h-[80%] flex flex-col mt-[30px] shadow-lg shadow-blue-400 rounded-md justify-center items-center"
-        >
-          <span class="block h-[20%]"
-            >Num1
+        <div class="mb-6">
+          <label
+            for="password"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your password</label
+          >
+          <input
+            type="password unhide"
+            id="password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
             <input
-              class="text-blue-500"
-              id="num1"
-              placeholder="enter First number "
+              id="remember"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+              required
             />
-          </span>
-          <span class="block h-[20%]"
-            >Num2
-            <input
-              class="text-blue-500"
-              id="num2"
-              placeholder="enter Second number "
-            />
-          </span>
-          <div class="w-[80%] h-[30%] flex p-[4px] justify-evenly items-center">
-            <button
-              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
-              onclick="add()"
-            >
-              Add
-            </button>
-            <button
-              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
-              onclick="sub()"
-            >
-              Subtract
-            </button>
-            <button
-              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
-              onclick="mul()"
-            >
-              Multiply
-            </button>
-            <button
-              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
-              onclick="div()"
-            >
-              Divide
-            </button>
           </div>
-          <h3 class="text-blue-400" id="H3"></h3>
+          <label
+            for="remember"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Remember me</label
+          >
         </div>
-      </div>
+        <button
+          type="submit"
+          class="text-white bg-green-500 hover:bg-blue-800 focus:ring-4 hover:scale-110 transition-all ease-in duration-200 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
+      </form>
     </section>
     <script src="index.js"></script>
   </body>

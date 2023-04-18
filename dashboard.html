@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col j">
+      <header class="text-gray-600 bg-blue-200 body-font">
+        <div
+          class="container mx-auto flex justify-between flex-wrap p-5 flex-col md:flex-row items-center"
+        >
+          <a
+            class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-10 h-10 text-white p-2 bg-blue-400 rounded-full"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path>
+            </svg>
+            <span class="ml-3 text-xl">Calculator</span>
+          </a>
+
+          <button
+            class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          onclick="logout()">
+          Logout
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="w-full h-[70%] flex justify-center items-center">
+        <div
+          class="w-[30%] h-[80%] flex flex-col mt-[30px] shadow-lg shadow-blue-400 rounded-md justify-center items-center"
+        >
+          <span class="block h-[20%]"
+            >Num1
+            <input
+              class="text-blue-500"
+              id="num1"
+              placeholder="enter First number "
+            />
+          </span>
+          <span class="block h-[20%]"
+            >Num2
+            <input
+              class="text-blue-500"
+              id="num2"
+              placeholder="enter Second number "
+            />
+          </span>
+          <div class="w-[80%] h-[30%] flex p-[4px] justify-evenly items-center">
+            <button
+              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
+              onclick="add()"
+            >
+              Add
+            </button>
+            <button
+              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
+              onclick="sub()"
+            >
+              Subtract
+            </button>
+            <button
+              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
+              onclick="mul()"
+            >
+              Multiply
+            </button>
+            <button
+              class="w-[20%] h-[60%] text-[14px] rounded-md bg-blue-400 text-white"
+              onclick="div()"
+            >
+              Divide
+            </button>
+          </div>
+          <h3 class="text-blue-400" id="H3"></h3>
+        </div>
+      </div>
+    </section>
+    <script>
+      function logout(){
+        localStorage.clear()
+        window.location.href=("http://127.0.0.1:5500/index.html?")
+      }
+
+      function verify(){
+        if (localStorage.user==true)
+        {
+
+        }
+        else
+        {
+          window.location.href=("http://127.0.0.1:5500/index.html?")
+        }
+      }
+      verify()
+    </script>
+
+  </body>
+</html>
